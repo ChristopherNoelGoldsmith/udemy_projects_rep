@@ -73,8 +73,13 @@ img {
 
 /*Header*/
 
-.hero {
+.hero * {
   z-index: 100;
+}
+
+.hero.blog {
+  background: url('/images/home/blog.jpg') no-repeat center center/cover;
+  height: 30vh;
 }
 
 .hero {
@@ -114,7 +119,7 @@ img {
   height: 100%;
   width: 100%;
   background: rgba(0, 0, 0, 0.6);
-  z-index: -100;
+  z-index: 100;
 }
 
 /*Icons*/
@@ -134,4 +139,96 @@ img {
   border-radius: 50%;
   padding: 1rem;
   margin-bottom: 15px;
+}
+
+/*Cases*/
+.cases img:hover {
+  opacity: 0.7;
+}
+
+.team img {
+  border-radius: 50%;
+}
+
+/*Callback Form*/
+
+.callback-form {
+  width: 100%;
+  padding: 20px 0;
+}
+
+.callback-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.callback-form .form-control {
+  margin-bottom: 15px;
+}
+
+.callback-form input {
+  width: 100%;
+  padding: 4px;
+  height: 40px;
+  border: grey 1px solid;
+}
+
+.callback-form input:focus {
+  outline-color: #28a745;
+}
+
+.callback-form .btn {
+  padding: 12px 0;
+  margin-top: 20px;
+}
+
+/*Footer*/
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 200px;
+}
+
+.footer a {
+  color: white
+}
+
+.footer a:hover {
+  color: #28a745;
+}
+
+.footer .social>* {
+  margin-right: 30px;
+}
+
+/*Mobile*/
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: 120px;
+    padding: 20px;
+  }
+
+  .navbar a {
+    padding: 10px 10px;
+    margin: 0 3px;
+  }
+
+  .flex-items {
+    flex-direction: column;
+  }
+
+  .flex-columns .column,
+  .flex-grid .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  .team img {
+    width: 70%;
+  }
 }
